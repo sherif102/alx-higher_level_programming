@@ -1,2 +1,2 @@
-#!/bin/bash/env
-	python3 $PYFILE
+#!/bin/bash/env python3
+$PYFILE
