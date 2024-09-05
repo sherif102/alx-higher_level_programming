@@ -1,4 +1,4 @@
 #!/bin/bash
 python3
 import py_compile
-py_compile.main([$PYFILE])
+py_compile.compile('$PYFILE')
