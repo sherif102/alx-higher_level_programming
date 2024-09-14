@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\0x00-python-hello_world"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\0x00-python-hello_world\\100-write.py",
   "PreviewInSolutionExplorer": false
 }

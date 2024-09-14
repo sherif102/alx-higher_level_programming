@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\hyper\\OneDrive\\Documents\\School\\alx-higher_level_programming\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hyper\\OneDrive\\Documents\\School\\alx-higher_level_programming\\0x00-python-hello_world\\100-write.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:0x00-python-hello_world\\100-write.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hyper\\OneDrive\\Documents\\School\\alx-higher_level_programming\\0x00-python-hello_world\\102-magic_calculation.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:0x00-python-hello_world\\102-magic_calculation.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +27,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:2:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "100-write.py",
+              "DocumentMoniker": "C:\\Users\\hyper\\OneDrive\\Documents\\School\\alx-higher_level_programming\\0x00-python-hello_world\\100-write.py",
+              "RelativeDocumentMoniker": "0x00-python-hello_world\\100-write.py",
+              "ToolTip": "C:\\Users\\hyper\\OneDrive\\Documents\\School\\alx-higher_level_programming\\0x00-python-hello_world\\100-write.py",
+              "RelativeToolTip": "0x00-python-hello_world\\100-write.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-09-14T06:45:48.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "102-magic_calculation.py",
+              "DocumentMoniker": "C:\\Users\\hyper\\OneDrive\\Documents\\School\\alx-higher_level_programming\\0x00-python-hello_world\\102-magic_calculation.py",
+              "RelativeDocumentMoniker": "0x00-python-hello_world\\102-magic_calculation.py",
+              "ToolTip": "C:\\Users\\hyper\\OneDrive\\Documents\\School\\alx-higher_level_programming\\0x00-python-hello_world\\102-magic_calculation.py",
+              "RelativeToolTip": "0x00-python-hello_world\\102-magic_calculation.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-09-14T06:44:17.852Z",
+              "EditorCaption": ""
             }
           ]
         }
