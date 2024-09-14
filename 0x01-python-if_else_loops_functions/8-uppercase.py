@@ -8,5 +8,3 @@ def uppercase(str):
         
         print("{}".format(chr(b)), end='')
     print("{}".format(''))
-
-uppercase("Best School 98 Battery street")
