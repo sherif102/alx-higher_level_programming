@@ -11,7 +11,6 @@
 listint_t *insert_node(listint_t **head, int number)
 {
     listint_t *node, *temp, *new_node;
-    listint_t *result = NULL;
     new_node = (listint_t *)malloc(sizeof(listint_t));
     if (new_node == NULL)
     {
@@ -42,10 +41,7 @@ listint_t *insert_node(listint_t **head, int number)
     	temp = temp->next;
     }
 
-    if (temp->next == NULL)
-    {
-    	temp->next = new_node;
-    	result = new_node;
-    }
-    return (result);
+    temp->next = new_node;
+
+    return (new_node);
 }
