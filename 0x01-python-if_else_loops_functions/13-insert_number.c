@@ -29,7 +29,7 @@ listint_t *insert_node(listint_t **head, int number)
 
     temp = *head;
     
-    while (temp != NULL)
+    while (temp->next != NULL)
     {
     	if (temp->next->n > number)
         {
