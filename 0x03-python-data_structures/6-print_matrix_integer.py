@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
+    if matrix == [[]]:
+        return
     mlen = len(matrix)
     i = 0
     while i < mlen:
