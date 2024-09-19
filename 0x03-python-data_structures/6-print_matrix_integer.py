@@ -6,7 +6,7 @@ def print_matrix_integer(matrix=[[]]):
         for j in matrix[i]:
             smlen = len(matrix[i])
             if j == matrix[i][smlen - 1]:
-                print("{}".format(j))
+                print("{:d}".format(j))
                 continue
-            print("{}".format(j), end=" ")
+            print("{:d}".format(j), end=" ")
         i += 1
