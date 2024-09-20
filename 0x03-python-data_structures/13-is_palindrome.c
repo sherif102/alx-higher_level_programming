@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 /**
  * is_palindrome - checks if a list is palindrome
  * @head: head parsed
@@ -11,37 +10,38 @@
 
 int is_palindrome(listint_t **head)
 {
-    listint_t *front, *back;
+    listint_t *front, *back, *middle;
     int n = 0, center = 0, i = 0;
     if (*head == NULL || (*head)->next == NULL)
         return (1);
-    front = *head;
+    front = middle = *head;
 
     /* list item count = n */
-    while (front != NULL)
-    {
+    for (n = 0; front != NULL; n++)
         front = front->next;
-        n++;
-    }
-    front = *head;
-    
-    center = n / 2;
 
-    while (center >= 0)
+    if (n % 2 == 1)
+        center = (n / 2) + 1;
+    else
+        center = n / 2;
+
+    for (i = 0; i < center; i++)
+        middle = middle->next;
+
+    back = middle;
+    front = *head;
+    n = n / 2;
+
+    while (back)
     {
-        back = *head;
-        i = 0;
-        while (i < n - 1)
-        {
-            back = back->next;
-            i++;
-        }
+        for (i = 0; i < n - 1; i++)
+            front = front->next;
+
         if (front->n != back->n)
             return (0);
-
-        front = front->next;
-
-        center--;
+            
+        back = back->next;
+        front = *head;
         n--;
     }
     return (1);
