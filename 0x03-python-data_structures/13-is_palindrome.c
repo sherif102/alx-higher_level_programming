@@ -10,12 +10,11 @@
 
 int is_palindrome(listint_t **head)
 {
-    if (*head == NULL || (*head)->next == NULL)
-        return (1);
-    
     listint_t *front, *back, *middle;
     int n = 0, center = 0, i = 0;
     
+    if (*head == NULL || (*head)->next == NULL)
+        return (1);
     front = middle = *head;
 
     /* list item count = n */
