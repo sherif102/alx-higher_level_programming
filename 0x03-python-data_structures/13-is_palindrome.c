@@ -33,7 +33,7 @@ int is_palindrome(listint_t **head)
     front = *head;
     n = n / 2;
 
-    front_value = malloc((n + 1) * sizeof(int));
+    front_value = malloc((n - 1) * sizeof(int));
     if (front_value == NULL)
     {
         free(front_value);
