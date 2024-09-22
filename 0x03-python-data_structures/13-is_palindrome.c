@@ -10,8 +10,9 @@
 
 int is_palindrome(listint_t **head)
 {
-    listint_t *front, *back, *middle;
+    listint_t *front, *middle;
     int n = 0, center = 0, i = 0;
+    int *front_value;
     
     if (*head == NULL || (*head)->next == NULL)
         return (1);
@@ -29,21 +30,33 @@ int is_palindrome(listint_t **head)
     for (i = 0; i < center; i++)
         middle = middle->next;
 
-    back = middle;
     front = *head;
     n = n / 2;
 
-    while (back)
+    front_value = malloc(n * sizeof(int));
+    if (front_value == NULL)
     {
-        for (i = 0; i < n - 1; i++)
-            front = front->next;
-
-        if (front->n != back->n)
-            return (0);
-            
-        back = back->next;
-        front = *head;
-        n--;
+        free(front_value);
+        return (0);
     }
+
+    for (center = 0; center < n; center++)
+    {
+        front_value[center] = front->n;
+        front = front->next;
+    }
+
+    while (middle)
+    {
+        if (front_value[center - 1] != middle->n)
+        {
+            free(front_value);
+            return (0);
+        }
+            
+        middle = middle->next;
+        center--;
+    }
+    free(front_value);
     return (1);
 }
