@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
+    if len(my_list is 0):
+        return 0
     items = 0
     average = 0
     for item in my_list:
