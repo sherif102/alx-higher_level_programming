@@ -18,6 +18,5 @@ def safe_print_list_integers(my_list=[], x=0):
             y += 1
             i += 1
         return i
-    except (IndexError):
-        print("")
-        return i
+    except (IndexError, TypeError) as e:
+        raise e
