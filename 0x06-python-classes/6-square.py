@@ -15,6 +15,8 @@ class Square:
         elif (size < 0):
             raise ValueError("size must be >= 0")
         self.__size = size
+        if ((len(position) != 2) or ((position[0] and position[1]) is not int)):
+            raise TypeError("position must be a tupple of 2 positive integers")
         self.__position = position
 
     def area(self):
