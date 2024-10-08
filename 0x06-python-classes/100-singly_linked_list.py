@@ -7,12 +7,12 @@ class Node:
     """ the creation of a new node """
     def __init__(self, data, next_node=None):
         """ initializes the data and new_node attribute """
-        if type(data) is not int:
+        if type(data) != int:
             raise TypeError("data must be an integer")
         self.__data = data
 
-        # if ((next_node is not None) or (next_node is not Node)):
-        #     raise TypeError("next_node must be a Node object")
+        if (not isinstance(next_node, Node)) and next_node is not None:
+            raise TypeError("next_node must be a Node object")
         self.__next_node = next_node
 
     @property
@@ -35,7 +35,7 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         """ setting value for next_node """
-        if ((value is not None) or (value is not Node)):
+        if (not isinstance(value, Node) and value is not None):
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
@@ -48,10 +48,7 @@ class SinglyLinkedList:
 
     def __repr__(self):
         """ format the class to be printable """
-        for i in self.__head:
-            print("{}".format(i.data))
     
     def sorted_insert(self, value):
         """ insert new node in a sorted manner """
-        x = Node(value)
-        self.__head.append(x)
+
