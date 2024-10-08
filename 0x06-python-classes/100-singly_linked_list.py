@@ -44,11 +44,28 @@ class SinglyLinkedList:
     """ defines a singly linked list """
     def __init__(self):
         """ initializes the head """
-        self.__head = []
+        self.__head = None
 
-    def __repr__(self):
+    def __str__(self):
         """ format the class to be printable """
+        value = []
+        temp = self.__head
+        while temp is not None:
+            value.append(str(temp.data))
+            temp = temp.next_node
+        return ('\n'.join(value))
     
     def sorted_insert(self, value):
         """ insert new node in a sorted manner """
-
+        node = Node(value)
+        if self.__head == None:
+            self.__head = node
+        elif self.__head.data > node.data:
+            node.next_node = self.__head
+            self.__head = node
+        else:
+            temp = self.__head
+            while (temp.next_node is not None) and (value > temp.next_node.data):
+                temp = temp.next_node
+            node.next_node = temp.next_node
+            temp.next_node = node
