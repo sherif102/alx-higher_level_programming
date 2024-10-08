@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This module defines a -node- and a -singly linked list-
+""" This module defines a -node- and a -singly linked list- class
 with all the required attributes """
 
 
