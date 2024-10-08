@@ -7,7 +7,7 @@ class Node:
     """ the creation of a new node """
     def __init__(self, data, next_node=None):
         """ initializes the data and new_node attribute """
-        if type(data) != int:
+        if not isinstance(data, int):
             raise TypeError("data must be an integer")
         self.__data = data
 
@@ -23,7 +23,7 @@ class Node:
     @data.setter
     def data(self, value):
         """ set new value for data """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
 
@@ -54,18 +54,19 @@ class SinglyLinkedList:
             value.append(str(temp.data))
             temp = temp.next_node
         return ('\n'.join(value))
-    
+
     def sorted_insert(self, value):
         """ insert new node in a sorted manner """
         node = Node(value)
-        if self.__head == None:
+        if self.__head is None:
             self.__head = node
         elif self.__head.data > node.data:
             node.next_node = self.__head
             self.__head = node
         else:
             temp = self.__head
-            while (temp.next_node is not None) and (value > temp.next_node.data):
+            while (temp.next_node is not None) and
+            (value > temp.next_node.data):
                 temp = temp.next_node
             node.next_node = temp.next_node
             temp.next_node = node
