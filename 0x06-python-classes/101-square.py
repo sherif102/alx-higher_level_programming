@@ -68,7 +68,7 @@ class Square:
         """ print the square instance in a customized representation """
         value = []
         if (self.__size == 0):
-            return '\n'
+            return ''
         if self.__position[1] != 0:
             value.append('\n' * self.__position[1])
         for i in range(self.__size):
