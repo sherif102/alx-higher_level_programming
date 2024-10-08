@@ -35,37 +35,25 @@ class Square:
         self.__size = value
 
     def __eq__(self, other):
-        if self.__size == other.size:
-            return True
-        else:
-            return False
+        """ define the += comparison """
+        return self.__size == other.size
 
     def __ne__(self, other):
-        if self.__size != other.size:
-            return True
-        else:
-            return False
+        """ define the != comparison """
+        return self.__size != other.size
 
     def __gt__(self, other):
-        if self.__size > other.size:
-            return True
-        else:
-            return False
+        """ define the > comparison """
+        return self.__size > other.size
 
     def __ge__(self, other):
-        if self.__size >= other.size:
-            return True
-        else:
-            return False
+        """ define the >= comparison """
+        return self.__size >= other.size
 
     def __lt__(self, other):
-        if self.__size < other.size:
-            return True
-        else:
-            return False
+        """ define the < comparison """
+        return self.__size < other.size
 
     def __le__(self, other):
-        if self.__size <= other.size:
-            return True
-        else:
-            return False
+        """ define the <= comparison """
+        return self.__size <= other.size
