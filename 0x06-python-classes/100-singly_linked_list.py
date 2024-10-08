@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" This module defines a -node- and a -singly linked list- class
-with all the required attributes """
+""" This module defines a -node- and a
+-singly linked list- class with all the
+required attributes """
 
 
 class Node:
@@ -65,8 +66,7 @@ class SinglyLinkedList:
             self.__head = node
         else:
             temp = self.__head
-            while (temp.next_node is not None) and
-                (value > temp.next_node.data):
+            while temp.next_node is not None and value > temp.next_node.data:
                 temp = temp.next_node
             node.next_node = temp.next_node
             temp.next_node = node
