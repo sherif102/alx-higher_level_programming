@@ -1,0 +1,23 @@
+"""
+The ''0-add_integer'' module
+==============================
+
+Using ''add_integer''
+
+>>> from 0-add_integer import add_integer
+
+--------------------------------------------------------------
+The function ''add_integer'' sums two integer value together
+--------------------------------------------------------------
+
+>>> add_integer(4, 10)
+14
+>>> add_integer(-1, 2)
+1
+>>> add_integer(0, -2)
+-2
+>>> add_integer(10, -1)
+9
+>>> add_integer(10, 0)
+10
+"""
