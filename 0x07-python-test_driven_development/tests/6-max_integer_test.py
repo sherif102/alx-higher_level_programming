@@ -17,6 +17,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([7, 8, 20]), 20)
         self.assertEqual(max_integer([17, 8, 2]), 17)
         self.assertEqual(max_integer(['a', 'y', 't']), 'y')
+        self.assertEqual(max_integer([2], 2))
         with self.assertRaises(TypeError):
             max_integer([7, 8, '2'])
         with self.assertRaises(TypeError):
