@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" the module 0-matrix_divided """
+"""
+Module: 2-matrix_divided
+Author: Sheriff Abdulfatai
+"""
 
 
 def matrix_divided(matrix, div):

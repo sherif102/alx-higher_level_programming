@@ -1,5 +1,6 @@
 """
-The 3-say_my_name module
+Module: 3-say_my_name
+Author: Sheriff Abdulfatai
 
 Using 'say_my_name'
 ----------------------

@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" the module '0-add_integer' """
+"""
+Module: 0-add_integer
+Author: Sheriff Abdulfatai
+"""
 
 
 def add_integer(a, b=98):

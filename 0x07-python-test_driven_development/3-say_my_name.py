@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" the module 3-say_my_name """
+"""
+Module: 3-say_my_name
+Author: Sheriff Abdulfatai
+"""
 
 
 def say_my_name(first_name, last_name=""):
