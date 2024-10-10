@@ -1,0 +1,32 @@
+"""
+The 3-say_my_name module
+
+Using 'say_my_name'
+----------------------
+
+>>> from 3-say_my_name import say_my_name
+
+-------------------------------------------
+
+>>> say_my_name("Julien", "Chris")
+My name is Julien Chris
+
+>>> say_my_name("69", "40")
+My name is 69 40
+
+>>> say_my_name("", "")
+My name is  
+
+>>> say_my_name("Julien", None)
+My name is Julien (null)
+
+>>> say_my_name(30, "Chris")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name("Julien", 5)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+"""
