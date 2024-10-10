@@ -1,0 +1,38 @@
+"""
+Module: 5-text_indentation
+Author: Sheriff Abdulfatai
+
+Using ''print_square''
+
+-------------------------------------------
+>>> from 5-text_indentation import text_indentation
+
+--------------------------------------------
+
+>>> text_indentation("where are you coming from")
+where are you coming from
+
+>>> text_indentation("can you come over? if yes, good")
+can you come over?
+<BLANKLINE>
+<BLANKLINE>
+if yes, good
+
+>>> text_indentation("here. we: go? smile")
+here.
+<BLANKLINE>
+<BLANKLINE>
+we:
+<BLANKLINE>
+<BLANKLINE>
+go?
+<BLANKLINE>
+<BLANKLINE>
+smile
+
+>>> text_indentation(2)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+"""
