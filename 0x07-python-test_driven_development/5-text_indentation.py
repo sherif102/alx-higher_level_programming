@@ -52,7 +52,8 @@ def text_indentation(text):
         if text[x] in custom:
             last = text[x]
             print(text[x], end='')
-            print('\n' * 2)
+            print()
+            print()
         else:
             print(text[x], end='')
             last = text[x]
