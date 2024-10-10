@@ -20,4 +20,8 @@ The function ''add_integer'' sums two integer value together
 9
 >>> add_integer(10, 0)
 10
+>>> add_integer('c', 6)
+a must be an integer
+>>> add_integer(7, 't')
+b must be an integer
 """
