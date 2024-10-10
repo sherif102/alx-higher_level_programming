@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ the module 0-matrix_divided """
 
+
 def matrix_divided(matrix, div):
     """ divides a matrix by a divisor """
 
