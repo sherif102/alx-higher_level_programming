@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-# Module: 100-matrix_mul
-# Author: Sheriff Abdulfatai
-""" Multiply two matrices """
+"""
+Module: 100-lazy_matrix_mul
+Author: Sheriff Abdulfatai
+"""
 
 
-def matrix_mul(m_a, m_b):
-    """ multiplies m_a and m_b matrices """
+def lazy_matrix_mul(m_a, m_b):
+    import numpy as np
+    """ multiplies m_a and m_b matrices with numpy """
 
-    result = []
+    # result = []
 
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
@@ -28,8 +30,8 @@ def matrix_mul(m_a, m_b):
     if row != col:
         raise ValueError("m_a and m_b can't be multiplied")
 
-    res = []
-    cal = 0
+    # res = []
+    # cal = 0
 
     for xr in range(len(m_a)):
         for mbc in range(len(m_b[0])):
@@ -49,9 +51,12 @@ def matrix_mul(m_a, m_b):
                     raise TypeError("each row of m_a must be of the same size")
                 if len(m_b[xc]) != len(m_b[0]):
                     raise TypeError("each row of m_b must be of the same size")
-                cal += m_a[xr][xc] * m_b[xc][mbc]
-            res.append(cal)
-            cal = 0
-        result.append(res)
-        res = []
+        #         cal += m_a[xr][xc] * m_b[xc][mbc]
+        #     res.append(cal)
+        #     cal = 0
+        # result.append(res)
+        # res = []
+    a = np.array(m_a)
+    b = np.array(m_b)
+    result = a @ b
     return result
