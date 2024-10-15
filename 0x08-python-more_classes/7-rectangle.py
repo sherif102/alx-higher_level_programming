@@ -63,7 +63,7 @@ class Rectangle():
         if self.__width == 0 or self.__height == 0:
             return ''
         for x in range(self.__height):
-            string.append(str(Rectangle.print_symbol) * self.__width)
+            string.append(str(self.print_symbol) * self.__width)
             if x < self.__height - 1:
                 string.append('\n')
         return ''.join(string)
@@ -76,4 +76,3 @@ class Rectangle():
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
