@@ -7,4 +7,4 @@ Author: Sheriff Abdulfatai
 
 def is_same_class(obj, a_class):
     """ returnes true if obj is instance of class """
-    return type(obj) == a_class
+    return (type(obj) == a_class)
