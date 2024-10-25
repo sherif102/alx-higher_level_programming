@@ -7,9 +7,9 @@ Author: Sheriff Abdulfatai
 
 class MyList(list):
     """ class that inherits from 'list' class """
-    def __init__(self):
+    def __init__(self, lst=[]):
         """ initializes the list """
-        self.lst = []
+        self.lst = lst
 
     def print_sorted(self):
         """ print sorted list """
