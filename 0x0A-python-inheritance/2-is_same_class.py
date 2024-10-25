@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: 1-my_list.py
+Module: 2-is_same_class.py
 Author: Sheriff Abdulfatai
 """
 
