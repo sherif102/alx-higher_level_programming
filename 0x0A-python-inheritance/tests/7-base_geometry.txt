@@ -1,0 +1,13 @@
+"""
+Module: 1-my_list.txt
+Author: Sheriff Abdulfatai
+
+>>> from 7-base_geometry import BaseGeometry
+
+>>> bg = BaseGeometry()
+
+>>> bg.integer_validator("age", "me")
+[TypeError] age must be an integer
+
+
+"""
