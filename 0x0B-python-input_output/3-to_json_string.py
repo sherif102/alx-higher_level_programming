@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: 0-read_file.py
+Module: 3-to_json_string.py
 Author: Sheriff Abdulfatai
 """
 

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: 0-read_file.py
+Module: 2-append_write.py
 Author: Sheriff Abdulfatai
 """
 
