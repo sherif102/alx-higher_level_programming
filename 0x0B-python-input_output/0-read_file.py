@@ -8,4 +8,5 @@ Author: Sheriff Abdulfatai
 def read_file(filename=""):
     """ read file and print to stdout """
     with open(filename) as file:
-        print(file.read())
+        for line in file:
+            print(line, end='')
