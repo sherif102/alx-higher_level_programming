@@ -8,4 +8,5 @@ Author: Sheriff Abdulfatai
 def from_json_string(my_str):
     """ generate executable from json string """
     import json
-    json.loads(my_str)
+    loaded = json.loads(my_str)
+    return loaded
