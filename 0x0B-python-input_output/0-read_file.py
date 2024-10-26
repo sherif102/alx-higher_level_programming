@@ -6,7 +6,7 @@ Author: Sheriff Abdulfatai
 
 
 def read_file(filename=""):
-    """ read file and print to stdout """
+    """ read_file read file and print to stdout """
     with open(filename) as file:
         for line in file:
             print(line, end='')
