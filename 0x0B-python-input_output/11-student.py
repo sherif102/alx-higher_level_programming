@@ -30,4 +30,6 @@ class Student():
 
     def reload_from_json(self, json):
         """ replaces attributes of the object """
+        if len(json) == 0:
+            return
         self.__dict__ = json
