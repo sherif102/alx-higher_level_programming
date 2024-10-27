@@ -22,9 +22,9 @@ def pascal_triangle(n):
         return []
 
     result = []
-    for f_number in range(n + 1):
+    for f_number in range(n):
         data = []
-        for s_number in range(f_number + 1):
+        for s_number in range(f_number):
             data.append(combine(f_number, s_number))
         result.append(data)
     return result
