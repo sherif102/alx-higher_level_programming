@@ -13,14 +13,16 @@ class Student():
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, arg=[]):
+    def to_json(self, arg=['.']):
         """ generate dictionary representation of the class """
         result = {}
-        if len(arg) > 0:
+        if len(arg) > 0 and arg[0] != '.':
             for i in arg:
                 if hasattr(self, i):
                     result[i] = self.__dict__[i]
             return result
+        elif len(arg) == 0:
+            return {}
         else:
             for x in self.__dict__:
                 result[x] = self.__dict__[x]
