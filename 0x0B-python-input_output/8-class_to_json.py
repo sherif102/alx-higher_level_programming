@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: 7-add_item.py
+Module: 8-class_to_json.py
 Author: Sheriff Abdulfatai
 """
 
