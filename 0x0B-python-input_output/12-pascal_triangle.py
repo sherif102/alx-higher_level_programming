@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: 12-pascal_triangle.py.py
+Module: 12-pascal_triangle.py
 Author: Sheriff Abdulfatai
 """
 
