@@ -5,14 +5,14 @@ Author: Shriff Abdulfatai
 """
 
 
-Base = __import__("base.py").Base
+from base import Base
 """ Base class that monitor the id of each object """
 
 
 class Rectangle(Base):
     """ rectangle class inheriting from base """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """initialization with super id"""
+        """ initialization with super id """
         super().__init__(id=None)
         """ initianization of the base model """
         self.__width = width
