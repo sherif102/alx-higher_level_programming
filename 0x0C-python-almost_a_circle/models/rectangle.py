@@ -6,6 +6,8 @@ Author: Shriff Abdulfatai
 
 
 from models.base import Base
+
+
 class Rectangle(Base):
     """ rectangle class inheriting from base """
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -20,6 +22,7 @@ class Rectangle(Base):
     def width(self):
         """ get width """
         return self.__width
+
     @width.setter
     def width(self, value):
         """ set width value """
@@ -29,6 +32,7 @@ class Rectangle(Base):
     def height(self):
         """ get width """
         return self.__height
+
     @height.setter
     def height(self, value):
         """ set width value """
@@ -38,6 +42,7 @@ class Rectangle(Base):
     def x(self):
         """ get width """
         return self.__x
+
     @x.setter
     def x(self, value):
         """ set width value """
@@ -47,7 +52,8 @@ class Rectangle(Base):
     def y(self):
         """ get width """
         return self.__y
-    @x.setter
+
+    @y.setter
     def y(self, value):
         """ set width value """
         self.__y = value
