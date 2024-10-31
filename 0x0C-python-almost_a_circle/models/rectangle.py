@@ -96,7 +96,9 @@ class Rectangle(Base):
 
     def display(self):
         """ prints the display representation """
+        print("\n" * self.__y, end='')
         for x in range(self.__height):
+            print(" " * self.__x, end='')
             print("#" * self.__width)
 
     def __str__(self):
