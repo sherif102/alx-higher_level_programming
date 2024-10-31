@@ -5,7 +5,7 @@ Author: Shriff Abdulfatai
 """
 
 
-from base import Base
+Base = __import__('base').Base
 """ Base class that monitor the id of each object """
 
 
