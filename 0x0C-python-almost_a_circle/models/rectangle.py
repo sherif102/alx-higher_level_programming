@@ -6,6 +6,7 @@ Author: Shriff Abdulfatai
 
 
 Base = __import__("base.py").Base
+""" Base class that monitor the id of each object """
 
 
 class Rectangle(Base):
@@ -13,6 +14,7 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """initialization with super id"""
         super().__init__(id=None)
+        """ initianization of the base model """
         self.__width = width
         self.__height = height
         self.__x = x
