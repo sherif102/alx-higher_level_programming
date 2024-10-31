@@ -10,7 +10,7 @@ Base = __import__('base').Base
 
 
 class Rectangle(Base):
-    """ rectangle class inheriting from base """
+    """ rectangle class inheriting from base and initializing the base values with super """
     def __init__(self, width, height, x=0, y=0, id=None):
         """ initialization with super id """
         super().__init__(id=None)
