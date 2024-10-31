@@ -5,7 +5,7 @@ Author: Shriff Abdulfatai
 """
 
 
-from base import Base
+Base = __import__("base.py").Base
 class Rectangle(Base):
     """ rectangle class inheriting from base """
     def __init__(self, width, height, x=0, y=0, id=None):
