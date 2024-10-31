@@ -24,7 +24,7 @@ class Rectangle(Base):
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if type(y) is not int:
-            raise TypeError("y must be an intger")
+            raise TypeError("y must be an integer")
         if int(x) < 0:
             raise ValueError("x must be >= 0")
         if int(y) < 0:
@@ -85,7 +85,7 @@ class Rectangle(Base):
     def y(self, value):
         """ set width value """
         if type(value) is not int:
-            raise TypeError("y must be an intger")
+            raise TypeError("y must be an integer")
         if int(value) < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
