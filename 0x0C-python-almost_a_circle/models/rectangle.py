@@ -105,3 +105,11 @@ class Rectangle(Base):
         """ define the string representation """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - " \
             f"{self.__width}/{self.__height}"
+
+    def update(self, *args):
+        """ update the triangle methods through args"""
+        self.id = args[0]
+        Rectangle.width(args[1])
+        Rectangle.height(args[2])
+        Rectangle.x(args([3]))
+        Rectangle.y(args[4])
