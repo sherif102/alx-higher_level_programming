@@ -22,12 +22,25 @@ class Base:
         """ generate dictionary repersentation of a list of dictionaries """
         import json
 
-        result = []
-
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
+        return f"{json.dumps(list_dictionaries)}"
 
-        for x in list_dictionaries:
-            y = json.dumps(x)
-            result.append(y)
-        return result
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """ save json representation of list_objets to file """
+        obj = cls.__name__
+        filename = f"{obj}.json"
+
+        if list_objs is None or len(list_objs) == 0:
+            with open(filename, 'w') as file:
+                file.close()
+            return
+
+        with open(filename, 'w') as file:
+            file.write('[')
+            for x in list_objs:
+                file.write(str(cls.to_json_string(x.to_dictionary())))
+                if x is not list_objs[len(list_objs) - 1]:
+                    file.write(", ")
+            file.write(']')
