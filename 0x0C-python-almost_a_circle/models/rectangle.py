@@ -108,8 +108,10 @@ class Rectangle(Base):
 
     def update(self, *args):
         """ update the triangle methods through args"""
-        self.id = args[0]
-        self.width(args[1])
-        self.height(args[2])
-        self.x(args([3]))
-        self.y(args[4])
+        x = 0
+        func_list = [self.id, Rectangle.width, Rectangle.height, Rectangle.x, Rectangle.y]
+        func_list[x] = args[x]
+        x += 1
+        while x < len(args):
+            func_list[x](args[x])
+            x += 1
