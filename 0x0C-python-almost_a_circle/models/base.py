@@ -16,3 +16,18 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """ generate dictionary repersentation of a list of dictionaries """
+        import json
+
+        result = []
+
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+
+        for x in list_dictionaries:
+            y = json.dumps(x)
+            result.append(y)
+        return result
