@@ -5,7 +5,7 @@ Author: Shriff Abdulfatai
 """
 
 
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -106,12 +106,11 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - " \
             f"{self.__width}/{self.__height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ update the triangle methods through args"""
-        if args:
-            self.id = args[0]
-        att = ['width', 'height', 'x', 'y']
-        i = 0
-        for x in args[1:]:
-            setattr(self, att[i], x)
-            i += 1
+        att = ['id', 'width', 'height', 'x', 'y']
+        for attr, value in zip(att, args):
+            setattr(self, attr, value)
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
