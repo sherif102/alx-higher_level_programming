@@ -44,3 +44,11 @@ class Base:
                 if x is not list_objs[len(list_objs) - 1]:
                     file.write(", ")
             file.write(']')
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ loads json string to dictionary """
+        if json_string is None or len(json_string) == 0:
+            return []
+        import json
+        return json.loads(json_string)
