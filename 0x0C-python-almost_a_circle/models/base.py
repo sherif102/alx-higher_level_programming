@@ -32,9 +32,9 @@ class Base:
         obj = cls.__name__
         filename = f"{obj}.json"
 
-        if list_objs is None or len(list_objs) == 0:
+        if list_objs is None or list_objs == []:
             with open(filename, 'w') as file:
-                file.close()
+                file.write("[]")
             return
 
         with open(filename, 'w') as file:
