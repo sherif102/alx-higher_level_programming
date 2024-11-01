@@ -32,3 +32,11 @@ class Square(Rectangle):
     def __str__(self):
         """ define a customized print string """
         return f"[Square] ({self.id}) {self.__x}/{self.__y} - {self.__width}"
+
+    def update(self, *args, **kwargs):
+        """ update the current values """
+        att = ['id', 'size', 'x', 'y']
+        for x, y in zip(att, args):
+            setattr(self, x, y)
+        for key, values in kwargs.items():
+            setattr(self, key, values)
