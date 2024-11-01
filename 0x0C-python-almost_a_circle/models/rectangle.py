@@ -5,7 +5,7 @@ Author: Shriff Abdulfatai
 """
 
 
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -108,10 +108,10 @@ class Rectangle(Base):
 
     def update(self, *args):
         """ update the triangle methods through args"""
-        x = 0
-        func_list = [self.id, self.width, self.height, self.x, self.y]
-        func_list[x] = args[x]
-        x += 1
-        while x < len(args):
-            func_list[x](args[x])
-            x += 1
+        if args:
+            self.id = args[0]
+        att = ['width', 'height', 'x', 'y']
+        i = 0
+        for x in args[1:]:
+            setattr(self, att[i], x)
+            i += 1
