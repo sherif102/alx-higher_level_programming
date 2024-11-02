@@ -52,3 +52,24 @@ class Base:
             return []
         import json
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ creates an object instance from dictionary """
+        dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        try:
+            result = []
+            filename = f"{cls.__name__}.json"
+            with open(filename, 'r') as file:
+                readed = file.read()
+                from_json = cls.from_json_string(readed)
+                for x in from_json:
+                    result.append(cls.create(**x))
+            return result
+        except FileNotFoundError:
+            return []
