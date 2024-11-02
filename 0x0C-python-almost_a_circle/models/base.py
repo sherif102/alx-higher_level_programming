@@ -5,6 +5,10 @@ Author: Shriff Abdulfatai
 """
 
 
+import json
+import csv
+
+
 class Base:
     """ defines the id of every object """
     __nb_objects = 0
@@ -20,8 +24,6 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """ generate dictionary repersentation of a list of dictionaries """
-        import json
-
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return f"{json.dumps(list_dictionaries)}"
@@ -73,6 +75,41 @@ class Base:
                 from_json = cls.from_json_string(readed)
                 for x in from_json:
                     result.append(cls.create(**x))
+            return result
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ generate a csv file """
+        filename = f"{cls.__name__}.csv"
+        if not list_objs:
+            return
+        with open(filename, 'w', newline='') as file:
+            if cls.__name__ == 'Rectangle':
+                field = ['id', 'width', 'height', 'x', 'y']
+            else:
+                field = ['id', 'size', 'x', 'y']
+
+            csvwriter = csv.DictWriter(file, fieldnames=field)
+            csvwriter.writeheader()
+            for x in list_objs:
+                csvwriter.writerow(x.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ loads csv file to instance """
+        filename = f"{cls.__name__}.csv"
+        result = []
+        field = ['id', 'width', 'height', 'x', 'y', 'size']
+        try:
+            with open(filename, newline='') as file:
+                csvreader = csv.DictReader(file)
+                for row in csvreader:
+                    for key in row:
+                        if key in field:
+                            row[key] = int(row[key])
+                    result.append(cls.create(**row))
             return result
         except FileNotFoundError:
             return []
