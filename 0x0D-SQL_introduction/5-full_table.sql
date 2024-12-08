@@ -1,2 +1,2 @@
 -- table description
-SHOW columns from first_table;
+SHOW columns FROM first_table;
