@@ -1,10 +1,6 @@
 #!/usr/bin/node
-const Squar = require('./5-square');
-class Square extends Squar {
-  constructor (size) {
-    super(size);
-  }
-
+const ParentSquare = require('./5-square');
+class Square extends ParentSquare {
   charPrint (c = 'X') {
     let text = '';
     for (let i = 0; i < this.width; i++) text = text + c;
