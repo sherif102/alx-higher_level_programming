@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const dict = require('./test').dict;
+const dict = require('./101-data').dict;
 const nDict = {};
 for (const [key, value] of Object.entries(dict)) {
   if (nDict[value] === undefined) {
