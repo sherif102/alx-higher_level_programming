@@ -12,7 +12,7 @@ fs.open(file1, 'r', (err, filea) => {
     fs.appendFile(file3, data, () => console.log('Done'));
   });
 });
-fs.open(file2, 'r', (err, filea) => {
+fs.open(file2, 'r+', (err, filea) => {
   if (err) throw (err);
   fs.readFile(filea, (err, data) => {
     if (err) throw (err);
