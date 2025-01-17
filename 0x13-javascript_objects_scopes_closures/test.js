@@ -1,9 +1,6 @@
-#!/usr/bin/node
-exports.dict = {
-  89: 1,
-  90: 2,
-  91: 1,
-  92: 3,
-  93: 1,
-  94: 2
-};
+var fs = require('fs');
+
+fs.appendFile('mynewfile1.txt', 'Hello content!', function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+}); 
