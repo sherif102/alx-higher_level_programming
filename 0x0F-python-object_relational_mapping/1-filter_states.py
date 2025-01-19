@@ -17,6 +17,6 @@ if __name__ == "__main__":
         print(f"Error: {e.args[1]}")
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE name like BINARY 'N%' ORDER BY id")
     for row in cur.fetchall():
         print(row)
