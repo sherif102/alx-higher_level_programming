@@ -18,6 +18,6 @@ if __name__ == "__main__":
 
     cur = db.cursor()
     cur.execute("SELECT * FROM states "
-                "WHERE name = '{}' ORDER BY id".format(argv[4]))
+                "WHERE BINARY name = '{}' ORDER BY id".format(argv[4]))
     for row in cur.fetchall():
         print(row)
