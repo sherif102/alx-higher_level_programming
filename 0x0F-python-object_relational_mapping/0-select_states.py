@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
     try:
         db = MySQLdb.connect(user='developer',
-                             passwd='Developer@123',    db='hbtn_0e_0_usa')
+                             password='Developer@123',    db='hbtn_0e_0_usa')
     except Exception as e:
         print(f"Error: {e.args[1]}")
 
