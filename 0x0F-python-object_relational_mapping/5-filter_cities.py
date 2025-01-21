@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: 0-select_states.py
+Module: 5-filter_cities.py
 Author: Sheriff Abdulfatai
 """
 
@@ -37,4 +37,4 @@ if __name__ == "__main__":
     result = []
     for row in cur.fetchall():
         result.append(row[0])
-print(', '.join(result))
+    print(', '.join(result))
