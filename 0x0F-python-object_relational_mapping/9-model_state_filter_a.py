@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: 8-model_state_fetch_first.py
+Module: 7-model_state_fetch_all.py
 Author: Sheriff Abdulfatai
 """
 
@@ -18,8 +18,5 @@ if __name__ == "__main__":
 
     session = Session()
 
-    first_state = session.query(State).order_by(State.id).first()
-    if first_state:
-        print(f"{first_state.id}: {first_state.name}")
-    else:
-        print("Nothing")
+    for x in session.query(State).order_by(State.id).filter(State.name.contains('a')):
+        print(f"{x.id}: {x.name}")
