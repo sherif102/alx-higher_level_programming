@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Module: 11-model_state_insert.py
 Author: Sheriff Abdulfatai
