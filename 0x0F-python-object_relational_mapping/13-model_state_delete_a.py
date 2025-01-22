@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: 12-model_state_update_id_2.py
+Module: 13-model_state_delete_a.py
 Author: Sheriff Abdulfatai
 """
 
@@ -14,6 +14,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State).filter_by(id=2).first()
-    query.name = 'New Mexico'
+    for x in session.query(State).filter(State.name.contains('a')).all():
+        session.delete(x)
+
     session.commit()
