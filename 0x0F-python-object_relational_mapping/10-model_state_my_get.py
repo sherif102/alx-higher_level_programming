@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: 9-model_state_fetch_a.py
+Module: 10-model_state_my_get.py
 Author: Sheriff Abdulfatai
 """
 
@@ -18,6 +18,9 @@ if __name__ == "__main__":
 
     session = Session()
 
-    for x in session.query(State).filter(State.name.
-                                         contains('a')).order_by(State.id):
-        print(f"{x.id}: {x.name}")
+    state_obj = session.query(State).filter(State.name == sys.argv[4]).\
+        order_by(State.id).first()
+    if state_obj:
+        print(state_obj.id)
+    else:
+        print("Not found")
