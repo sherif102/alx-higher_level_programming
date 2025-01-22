@@ -1,7 +1,7 @@
 -- Database + tables to test
-DROP DATABASE IF EXISTS test_9;
-CREATE DATABASE IF NOT EXISTS test_9;
-USE test_9;
+DROP DATABASE IF EXISTS hbtn_0e_6_usa;
+CREATE DATABASE IF NOT EXISTS hbtn_0e_6_usa;
+USE hbtn_0e_6_usa;
 
 CREATE TABLE IF NOT EXISTS states ( 
     id INT NOT NULL AUTO_INCREMENT, 
