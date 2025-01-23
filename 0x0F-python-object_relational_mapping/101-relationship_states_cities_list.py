@@ -13,13 +13,10 @@ if __name__ == "__main__":
     from sqlalchemy.orm import sessionmaker
 
     engine = create_engine(f"mysql+mysqldb://{a[1]}:{a[2]}@localhost/{a[3]}")
-    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State).order_by(State.id).all()
-
-    for state in query:
+    for state in session.query(State).order_by(State.id):
         print(f'{state.id}: {state.name}')
         for city in state.cities:
             print(f'    {city.id}: {city.name}')
