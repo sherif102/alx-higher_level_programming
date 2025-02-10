@@ -10,3 +10,8 @@
     -   Display only body of a 200 status code response
     -   You have to use curl
 
+
+**2-delete.sh** - Write a Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response
+
+    -   You have to use curl
+
