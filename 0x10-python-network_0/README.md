@@ -55,3 +55,7 @@ Write a function that finds a peak in a list of unsorted integers.
     -   Your script must send a POST request with the contents of a file, passed with the filename as the second argument of the script, in the body of the request
     -   You have to use curl
 
+**102-catche_me.sh** - Write a Bash script that makes a request to 0.0.0.0:5000/catch_me that causes the server to respond with a message containing You got me!, in the body of the response.
+
+    -   You have to use curl
+    -   You are not allow to use echo, cat, etc. to display the final result
