@@ -1,7 +1,16 @@
 #!/usr/bin/python3
 """
-Module: 1-hbtn_header.py
-Author: Sheriff Abdulfatai
+Fetches and displays the X-Request-Id header from a given URL.
+
+Usage:
+    python3 1-hbtn_header.py <URL>
+
+Arguments:
+    URL (str): The URL to fetch.
+
+Output:
+    Prints the value of the "X-Request-Id" header if present.
+
 """
 
 
