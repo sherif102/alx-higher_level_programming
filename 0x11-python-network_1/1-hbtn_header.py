@@ -10,4 +10,5 @@ from sys import argv
 
 
 with urllib.request.urlopen(argv[1]) as response:
+    """fetch the request-id of a url"""
     print(response.headers["X-Request-Id"])
