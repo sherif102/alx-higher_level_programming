@@ -6,6 +6,8 @@ Author: Sheriff Abdulfatai
 
 
 from urllib.request import Request, urlopen
+
+
 request = Request('https://alx-intranet.hbtn.io/status')
 with urlopen(request) as request:
     html = request.read()
