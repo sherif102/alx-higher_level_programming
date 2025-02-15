@@ -17,5 +17,5 @@ if __name__ == "__main__":
         else:
             # print(res)
             print(f'[{res.get("id")}] {res.get("name")}')
-    except requests.exceptions.JSONDecodeError:
+    except requests.exceptions:
         print("Not a valid JSON")
