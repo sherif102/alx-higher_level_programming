@@ -13,7 +13,9 @@ if __name__ == "__main__":
         'Authorization': f'Bearer {password}',
         'X-GitHub-Api-Version': '2022-11-28'
     }
-    request = requests.get("https://api.github.com/user", auth=(user, password), headers=header)
+    request = requests.get("https://api.github.com/user",
+                           auth=(user, password),
+                           headers=header)
     response = request.json()
     id = response.get("id")
     print(id)
