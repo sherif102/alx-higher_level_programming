@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""fetch the response code of a url"""
+"""fetch the json response of a url"""
 
 
 import requests
@@ -7,15 +7,15 @@ from sys import argv
 
 if __name__ == "__main__":
     url = "https://www.google.com"
-    q = argv[1] if len(argv) > 1 else ""
-    url += f'?{q}'
-    print(url)
-    response = requests.post(url)
+    q = {'q': {argv[1]}} if len(argv) > 1 else {}
+
+    response = requests.post(url, data=q)
     try:
         res = response.json()
-        if len(res) == 0:
+        if not res:
             print("No result")
         else:
-            print(f'[{res[0].id}] {res[0].name}')
+            # print(res)
+            print(f'[{res.id}] {res.name}')
     except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
