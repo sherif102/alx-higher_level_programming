@@ -6,8 +6,8 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    url = "https://www.google.com"
-    q = {'q': {argv[1]}} if len(argv) > 1 else {}
+    url = "http://0.0.0.0:5000/search_user"
+    q = {'q': {argv[1]}} if len(argv) > 1 else {'q': ""}
 
     response = requests.post(url, data=q)
     try:
