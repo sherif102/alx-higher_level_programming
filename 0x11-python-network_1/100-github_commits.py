@@ -17,8 +17,8 @@ if __name__ == "__main__":
     response = request.json()
     counter = 0
     max_list = 10
-    if len(response.get("commit")) < max_list:
-        max_list = len(response.get("commit"))
+    if len(response) < max_list:
+        max_list = len(response)
     while counter < max_list:
         sha = response[counter].get("sha")
         commit = response[counter].get("commit")
