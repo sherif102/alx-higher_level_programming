@@ -16,7 +16,10 @@ if __name__ == "__main__":
     request = requests.get(url, headers=header)
     response = request.json()
     counter = 0
-    while counter <= 10:
+    max_list = 10
+    if len(response.get("commit")) < max_list:
+        max_list = len(response.get("commit"))
+    while counter < max_list:
         sha = response[counter].get("sha")
         commit = response[counter].get("commit")
         author = commit.get("author").get("name")
