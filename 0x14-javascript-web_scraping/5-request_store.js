@@ -11,9 +11,8 @@ async function writeFromUrl () {
 
   const body = text.body;
 
-  fs.writeFile(argv[3], body, 'utf-8', function (err, done) {
+  fs.writeFile(argv[3], body.trim(), 'utf-8', function (err, done) {
     if (err) throw err;
-    console.log('');
   });
 }
 
