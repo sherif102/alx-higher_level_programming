@@ -1,11 +1,12 @@
 #!/usr/bin/node
+const { argv } = require('node:process');
 const request = require('request');
 const { promisify } = require('util');
 
 const promisedRequest = promisify(request);
 
 async function characterCounter () {
-  const text = await promisedRequest('https://swapi-api.alx-tools.com/api/films/');
+  const text = await promisedRequest(`${argv[2]}`);
 
   const body = JSON.parse(text.body);
 
