@@ -12,20 +12,21 @@ async function characterCounter () {
     const body = JSON.parse(text.body);
 
     let counter = 0;
-    const characterList = [];
+    // const characterList = [];
     for (const result of body.results) {
       for (const character of result.characters) {
         if (character.slice(-3) === '18/') {
-          characterList.push(promisedRequest(character));
+          counter++;
+          // characterList.push(promisedRequest(character));
         }
       }
     }
 
-    const characters = await Promise.all(characterList);
+    // const characters = await Promise.all(characterList);
 
-    for (const char of characters) {
-      if (JSON.parse(char.body).name === 'Wedge Antilles') { counter++; }
-    }
+    // for (const char of characters) {
+    //   if (JSON.parse(char.body).name === 'Wedge Antilles') { counter++; }
+    // }
     console.log(counter);
   } catch (error) {
     console.error('');
